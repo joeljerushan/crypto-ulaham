@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>தமிழர் கிரிப்ட்டோ சமூகம்</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font Import -->
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Baloo Thambi 2', 'Verdana', Geneva, Tahoma, sans-serif;
+        }
+        /* Add modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .modal-content {
+            max-width: 90%;
+            max-height: 90vh;
+            margin: auto;
+            display: block;
+            position: relative;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+            z-index: 1001;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Hero Section -->
+    <div class="container mx-auto px-4 py-12">
+        <div class="flex justify-center text-center mb-6">
+            <img src="/images/logo.png" alt="Tamil Crypto Samoogam" class="w-6/12 h-full object-cover rounded-lg"/>
+        </div>
+        <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-lg p-8">
+            
+            <div class="prose max-w-none">
+                <p class="text-lg text-gray-800">
+                    வணக்கம் உறவுகளே!தயவு செய்து, யாரிடமும் திடீர் பண காரர் ஆகலாம் என்று நினைத்து; நீங்கள் கடினமாக உழைத்து சம்பாதித்த பணத்தை ஏமாற்றுக்காரர்களுக்கு வழங்க வேண்டாம்...சீரான முறையில் நிதானமாகவும், துல்லிதமாகவும் இந்த கிரிப்ட்டோ என்கின்ற பாரிய சமூத்திரத்தில் பாதுகாப்பாக பயணம் செய்ய, கீழக்கொண்டவாறு செய்துகொள்ளவவும்:
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Discord App Info -->
+    <div class="container mx-auto px-4 py-8">
+        <div class="max-w-4xl mx-auto mb-12">
+            <div class="flex items-center gap-2 mb-4 font-bold">
+                <span class="bg-indigo-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold">1</span>
+                <p class="text-2xl text-gray-800">
+                    இவ் இணையத்தளத்திற்கு செல்லவும் 
+                    <a href="https://discord.com" class="text-[#5865F2] hover:underline font-bold">https://discord.com</a>
+                </p>
+            </div>
+            <p class="text-lg text-gray-800">
+                https://discord.com என்ற இணையத்தளத்தில் இருந்து Discord என்ற சமூக வலைத்தள App-ஐ உங்கள் கைத்தொலைபேசி, மடி கணனி, அல்லது மேசை கணனி, tablet பதிவிறக்கம் செய்யலாம். அவ்வாறு செய்து, account/profile உருவாக்கிகொள்ளுங்கள்.
+            </p>
+        </div>
+
+        <!-- Screenshot Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-12">
+            <div class="bg-gray-200 rounded-lg h-64 cursor-pointer" onclick="openModal('/images/discord_web.jpg')">
+                <img src="/images/discord_web.jpg" alt="Screenshot 1" class="w-full h-full object-cover rounded-lg"/>
+            </div>
+            <div class="bg-gray-200 rounded-lg h-64 cursor-pointer" onclick="openModal('/images/discord_ios.jpg')">
+                <img src="/images/discord_ios.jpg" alt="Screenshot 2" class="w-full h-full object-cover rounded-lg"/>
+            </div>
+            <div class="bg-gray-200 rounded-lg h-64 cursor-pointer" onclick="openModal('/images/discord_android.jpg')">
+                <img src="/images/discord_android.jpg" alt="Screenshot 3" class="w-full h-full object-cover rounded-lg"/>
+            </div>
+        </div>
+
+        <div id="imageModal" class="modal" onclick="closeModal()">
+            <span class="close-modal">&times;</span>
+            <img id="modalImage" src="" alt="Enlarged screenshot" class="modal-content"/>
+        </div>
+    </div>
+
+    <div class="max-w-4xl mx-auto mb-12">
+        <div class="flex items-center gap-2 mb-4 font-bold">
+            <span class="bg-indigo-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold">2</span>
+            <p class="text-2xl text-gray-800">
+                இந்த லிங்க் மூலம் உங்களை இணைத்து கொள்ளுங்கள்
+                <a href="http://discord.gg/SDuWKH9hkz" class="text-[#5865F2] hover:underline font-bold">http://discord.gg/SDuWKH9hkz</a>
+            </p>
+        </div>
+        <p class="text-lg text-gray-800">
+            இந்த லிங்க் மூலம் உங்களை இணைத்து கொள்ளுங்கள்:http://discord.gg/SDuWKH9hkz (இங்க தான் எல்லா உரையாடலும், எங்கள் முழு நகர்வுகளும் இருக்கும் - தமிழர் கிரிப்ட்டோ சமூகம்)
+        </p>
+    </div>
+
+    <!-- Discord Link Section -->
+    <div class="container mx-auto px-4 py-8">
+        <div class="max-w-4xl mx-auto">
+             
+
+            <!-- WhatsApp Link Section -->
+            <div class="flex flex-col md:flex-row items-center gap-8 mb-12">
+                <div class="w-full md:w-1/3">
+                    <img src="/api/placeholder/400/320" alt="WhatsApp Screenshot" class="w-full rounded-lg shadow-lg"/>
+                </div>
+                <div class="w-full md:w-2/3">
+                    <p class="text-lg mb-4">
+                        https://chat.whatsapp.com/CU4vayhFdX27mItDHjEPfQ (குருஞ் செய்திகளுக்கு மட்டும் இந்த WhatsApp Community குழு பாவிக்கபடும்)
+                    </p>
+                    <a href="https://chat.whatsapp.com/CU4vayhFdX27mItDHjEPfQ" class="inline-block bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition-colors">
+                        WhatsApp குழுவில் சேர
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Thank You Message -->
+    <div class="bg-gray-100 py-12">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <p class="text-lg text-gray-800">
+                    உங்களுக்கு தெரிந்தவர்களுக்கும் இந்த விழிப்புணர்வை ஊட்டுங்கள்...<br/>நாம் மட்டும் முன்னேறினால் போதாது.. எமது உறவுகளையம் ஏமராமல் பார்த்து கொள்ள வேண்டும்! <br/><br/>என்றும் அன்புடன், உங்கள் <strong>பிறின்ஸ்லி</strong> 
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <p class="text-sm">© 2024 தமிழர் கிரிப்ட்டோ சமூகம். அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function openModal(imageSrc) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            modalImg.src = imageSrc;
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('imageModal');
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when pressing Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
+
+        // Prevent modal from closing when clicking on the image
+        document.getElementById('modalImage').addEventListener('click', function(event) {
+            event.stopPropagation();
+        });
+    </script>
+</body>
+</html>
